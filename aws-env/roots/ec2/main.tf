@@ -1,7 +1,7 @@
 data "terraform_remote_state" "vpc_info" {
   backend = "s3"
 
-  config {
+  config = {
     bucket = "vishnu-terraform-state-bucket"
     key = "vpc/terraform.tfstate"
     region = "us-east-1"
